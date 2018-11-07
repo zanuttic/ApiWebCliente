@@ -1,0 +1,11 @@
+C:\Users\czanutti\source\repos\ApiWeb\ApiWebCliente\obj\Debug\ApiWebCliente.csprojAssemblyReference.cache
+C:\Users\czanutti\source\repos\ApiWeb\ApiWebCliente\obj\Debug\ApiWebCliente.csproj.CoreCompileInputs.cache
+C:\Users\czanutti\source\repos\ApiWeb\ApiWebCliente\bin\Debug\ApiWebCliente.dll
+C:\Users\czanutti\source\repos\ApiWeb\ApiWebCliente\bin\Debug\ApiWebCliente.pdb
+C:\Users\czanutti\source\repos\ApiWeb\ApiWebCliente\bin\Debug\Newtonsoft.Json.dll
+C:\Users\czanutti\source\repos\ApiWeb\ApiWebCliente\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\czanutti\source\repos\ApiWeb\ApiWebCliente\bin\Debug\Newtonsoft.Json.xml
+C:\Users\czanutti\source\repos\ApiWeb\ApiWebCliente\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\czanutti\source\repos\ApiWeb\ApiWebCliente\obj\Debug\ApiWebCliente.csproj.CopyComplete
+C:\Users\czanutti\source\repos\ApiWeb\ApiWebCliente\obj\Debug\ApiWebCliente.dll
+C:\Users\czanutti\source\repos\ApiWeb\ApiWebCliente\obj\Debug\ApiWebCliente.pdb
