@@ -11,7 +11,6 @@ namespace ApiWebCliente
     public class JugadoresControler
     {
 
-       // StreamWriter _log = File.AppendText(@"D:\\log_JugadoresControler.log");
         
         static HttpClient client = new HttpClient();
         private string url = "https://emplearv.azurewebsites.net/api/Jugadores/";
@@ -23,7 +22,6 @@ namespace ApiWebCliente
             {
                
                 var j = JsonConvert.SerializeObject(jugadores);
-                //_log.WriteLine("Inicion Jugador" + j);
                 switch (accion)
                 {
                     case Acciones.Get:
@@ -42,13 +40,9 @@ namespace ApiWebCliente
                     default:
                         return null;
                 }
-                //_log.WriteLine("finalizo bien");
-                //_log.Close();
             }catch(Exception ex)
             {
                 var j = JsonConvert.SerializeObject(jugadores);
-                //_log.WriteLine(ex.Message);
-                //_log.Close();
             }
             return ojugadores;
         }
@@ -56,17 +50,12 @@ namespace ApiWebCliente
         #region Get
         public Jugadores get(Jugadores jugador)
         {
-            // StreamWriter WriteReportFile = File.AppendText(@"D:\\GetJugador.log");
             string json;
             using (var webClient = new System.Net.WebClient())
             {
                 json = webClient.DownloadString(url + jugador.Personas.Documento);
-                // Now parse with JSON.Net
-                //   WriteReportFile.WriteLine("DownloadString :" + json);
             }
             var jugadoresGet = JsonConvert.DeserializeObject<Jugadores>(json);
-            //WriteReportFile.WriteLine("Consulta finalizada :" + json);
-            //WriteReportFile.Close();
             return jugadoresGet;
         }
 
@@ -76,12 +65,8 @@ namespace ApiWebCliente
         #region Post
         public Jugadores Post(Jugadores jugador)
         {
-            //StreamWriter _log = File.AppendText(@"D:\\PostJugador.log");
             try
             {
-
-                //_log.WriteLine("Iniciando Post: ");
-
 
                 JugadoresPost jugadoresPost = new JugadoresPost()
                 {
@@ -108,28 +93,19 @@ namespace ApiWebCliente
 
                 var jugadoresJson = JsonConvert.SerializeObject(jugadoresPost);
 
-                //_log.WriteLine("Iniciando Post:  :" + jugadoresJson);
-
                 using (var webClient = new System.Net.WebClient())
                 {
 
                     webClient.Headers[HttpRequestHeader.ContentType] = "application/json";
 
                     json = webClient.UploadString(url, jugadoresJson);
-                    //json = webClient.UploadString("https://localhost:44396/api/Jugadores/", jugadoresJson);
-
-                    //_log.WriteLine("DownloadString :" + json);
                 }
                 var jugadoresGet = JsonConvert.DeserializeObject<Jugadores>(json);
-                //_log.WriteLine("Consulta finalizada :" + json);
-               // _log.Close();
 
                 return jugadoresGet;
             }
             catch (Exception ex)
             {
-                //_log.WriteLine("Error" + ex.Message);
-               // _log.Close();
                 return new Jugadores();
             }
         }

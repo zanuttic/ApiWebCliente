@@ -52,7 +52,6 @@ namespace ApiWebCliente
                     webClient.Headers[HttpRequestHeader.ContentType] = "application/json";
 
                     json = webClient.UploadString("https://emplearv.azurewebsites.net/api/Jugadores/", jugadoresJson);
-                    //json = webClient.UploadString("https://localhost:44396/api/Jugadores/", jugadoresJson);
                    
                     _log.WriteLine("DownloadString :" + json);
                 }

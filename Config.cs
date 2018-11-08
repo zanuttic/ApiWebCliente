@@ -10,9 +10,8 @@ namespace ApiWebCliente
     {
         public string getURL()
         {
-            var URL= "https://emplearv.azurewebsites.net";
-            return URL;
-            //return "http://www.empleavr.org/api/Metrics/";
+            
+            return "https://emplearv.azurewebsites.net";
         }
 
     }
